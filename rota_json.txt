@@ -1,0 +1,9 @@
+# @app.route('/api/clima/<cidade>', methods=["GET"])
+# def api_clima(cidade):
+#     """Endpoint JSON para integrações externas."""
+#     result = get_weather_by_city(cidade)
+
+#     if result["error"]:
+#         return jsonify({"message": result["message"]}), result["status"]
+
+#     return jsonify(result["data"]), result["status"]
