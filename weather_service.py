@@ -19,12 +19,14 @@ def validate_city_name(city: str) -> Union[str, None]:
         return "O nome da cidade deve ter pelo menos 2 caracteres."
     return None
 
+
 def transform_weather_data(raw_data: Dict[str, Any]) -> Dict[str, Any]:
     """Transforma os dados brutos da API no formato simplificado do dashboard."""
     current = raw_data.get('currentConditions', {})
     days = raw_data.get('days', [])[:7]  # Limitamos a 7 dias
     
     today_str = datetime.now().strftime('%Y-%m-%d')
+
     
     processed_data = {
         'data': today_str,
